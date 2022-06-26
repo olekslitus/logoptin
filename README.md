@@ -3,6 +3,7 @@ Unofficial Logitech Options for Linux
 
 !!! THIS SOFTWARE IS UNDER DEVELOPMENT, PLEASE DO NOT USE !!!
 
+
 ## Intro
 I created this project to learn [`systemd`](https://wiki.archlinux.org/title/systemd), Rust, DBus, daemons, and Linux services in general.
 As such I tried to document everything extensively, so others can learn from this repo as well.
@@ -19,7 +20,15 @@ with future GUI. Examples of simplifications are easier config file, more standa
 location of the config, availabilty via linux package mangers.
 Generally simpler design.
 
+
 ## Config
+We adhere to [XDG Base Directory Spec](https://wiki.archlinux.org/title/XDG_Base_Directory).
+Logi will look for config in such order of priority:
+- `XDG_CONFIG_HOME/logi/logi.toml` env variable
+- `$HOME/.config/logi/logi.toml`
+- `$HOME/.logi.toml`
+- `$HOME/.logi/logi.toml`
+
 Simple config using TOML file located at `.config/logi/<DEVICE-NAME>.toml`
 We use toml, cause it simple and readable, I dislike the 
 
@@ -32,22 +41,23 @@ We use toml, cause it simple and readable, I dislike the
 ## Compatible Devices
 |     Device     | Compatible? |              Config Name               |
 | -------------- | :---------: | -------------------------------------- |
-|  MX Master 3   |     Yes     |      `Wireless Mouse MX Master 3`      |
-|  MX Master 2S  |     Yes     |     `Wireless Mouse MX Master 2S`      |
-|   MX Master    |     Yes     |       `Wireless Mouse MX Master`       |
+| MX Master 3    |     Yes     | `Wireless Mouse MX Master 3`           |
+| MX Master 2S   |     Yes     | `Wireless Mouse MX Master 2S`          |
+| MX Master      |     Yes     | `Wireless Mouse MX Master`             |
 | MX Anywhere S2 |     Yes     | `Wireless Mobile Mouse MX Anywhere 2S` |
-| MX Anywhere 3  |     Yes     |            `MX Anywhere 3`             |
-|  MX Vertical   |     Yes     | `MX Vertical Advanced Ergonomic Mouse` |
-|    MX Ergo     |     Yes     |   `MX Ergo Multi-Device Trackball `    |
-|      M720      |     Yes     |  `M720 Triathlon Multi-Device Mouse`   |
-|      M590      |     Yes     |     `M585/M590 Multi-Device Mouse`     |
-|      T400      |     Yes     |        `Zone Touch Mouse T400`         |
-|    MX Keys     |     Yes     |      `MX Keys Wireless Keyboard`       |
-|      M500s     |     Yes     |     `Advanced Corded Mouse M500s`      |
+| MX Anywhere 3  |     Yes     | `MX Anywhere 3`                        |
+| MX Vertical    |     Yes     | `MX Vertical Advanced Ergonomic Mouse` |
+| MX Ergo        |     Yes     | `MX Ergo Multi-Device Trackball `      |
+| M720           |     Yes     | `M720 Triathlon Multi-Device Mouse`    |
+| M590           |     Yes     | `M585/M590 Multi-Device Mouse`         |
+| T400           |     Yes     | `Zone Touch Mouse T400`                |
+| MX Keys        |     Yes     | `MX Keys Wireless Keyboard`            |
+| M500s          |     Yes     | `Advanced Corded Mouse M500s`          |
 
 
 ## MacOS and Windows users
 Please use the official driver and app from Logitech: [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html).
+
 
 ## HID++
 - [Logitech Specification for HID++ 2.0](https://lekensteyn.nl/files/logitech/logitech_hidpp_2.0_specification_draft_2012-06-04.pdf)
@@ -75,35 +85,28 @@ Please use the official driver and app from Logitech: [Logi Options+](https://ww
 - https://github.com/mehcode/config-rs
 - https://12factor.net/
 - https://docs.rs/config/0.1.3/config/
-
-
-## Logi GUI
-Make it work with logiops as well.
-- https://www.egui.rs/#demo
-
-
-## Links
-- [systemd.io](https://systemd.io/)
-
-
-## Credits
-Thank you [PixlOne](https://github.com/PixlOne) for amazing [logiops](https://github.com/PixlOne/logiops).
-
-
-
-
-
-
-
-
-
-
-```systemctl restart logid.service```
-
 - https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/
 - https://github.com/PixlOne/logiops/wiki/Configuration
 - [control id from linux](https://github.com/torvalds/linux/blob/master/include/uapi/linux/input-event-codes.h)
 
 
+## Used Libraries
+- [clap](https://crates.io/crates/clap) for cli
+- [xdg](https://crates.io/crates/xdg) for config file
+- [toml](https://crates.io/crates/toml)
 
 
+## Stadards Used
+- [systemd](https://systemd.io/)
+- [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)
+
+
+## Logi GUI
+Make it work with logiops as well.
+- https://www.egui.rs/#demo
+- https://docs.rs/libconfig/latest/libconfig/
+- https://hyperrealm.github.io/libconfig/libconfig_manual.html
+
+
+## Credits
+Thank you [PixlOne](https://github.com/PixlOne) for amazing [logiops](https://github.com/PixlOne/logiops).
