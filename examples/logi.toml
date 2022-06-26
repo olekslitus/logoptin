@@ -1,0 +1,9 @@
+[devices]
+
+[devices.mouse]
+name = "Wireless Mouse MX Master"
+dpi = 1000
+smartshift = "on"
+hiresscroll = "on"
+
+[buttons]
