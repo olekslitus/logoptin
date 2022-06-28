@@ -59,7 +59,17 @@ We use toml, cause it simple and readable, I dislike the
 Please use the official driver and app from Logitech: [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html).
 
 
-## HID++
+## How this works?
+
+### Daemon
+
+### systemd
+
+### userspace
+
+### driver
+
+### HID++
 - [Logitech Specification for HID++ 2.0](https://lekensteyn.nl/files/logitech/logitech_hidpp_2.0_specification_draft_2012-06-04.pdf)
 - [Solaar on HID++](https://pwr-solaar.github.io/Solaar/features.html)
 - [libratbag](https://github.com/libratbag/libratbag) - DBus daemon to configure imput devices
@@ -94,6 +104,11 @@ Please use the official driver and app from Logitech: [Logi Options+](https://ww
 - [clap](https://crates.io/crates/clap) for cli
 - [xdg](https://crates.io/crates/xdg) for config file
 - [toml](https://crates.io/crates/toml)
+- [cargo-deb](https://crates.io/crates/cargo-deb)
+  
+### Looking into 
+- https://docs.rs/figment/latest/figment/index.html#metadata
+- https://crates.io/crates/config
 
 
 ## Stadards Used
@@ -109,4 +124,5 @@ Make it work with logiops as well.
 
 
 ## Credits
-Thank you [PixlOne](https://github.com/PixlOne) for amazing [logiops](https://github.com/PixlOne/logiops).
+- [PixlOne](https://github.com/PixlOne) for amazing [logiops](https://github.com/PixlOne/logiops).
+- [vasilakisfil](https://github.com/vasilakisfil) for simple [hello.service](https://github.com/vasilakisfil/hello.service) Rust example
