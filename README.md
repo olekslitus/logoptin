@@ -123,6 +123,21 @@ Make it work with logiops as well.
 - https://hyperrealm.github.io/libconfig/libconfig_manual.html
 
 
+## Other
+- https://en.wikipedia.org/wiki/Daemon_(computing)
+- https://stackoverflow.com/questions/61671013/how-to-make-rust-run-gracefully-in-the-background-and-daemonize
+- https://stackoverflow.com/questions/61443052/rust-daemon-best-practices
+- https://stackoverflow.com/questions/70676063/how-to-make-rust-log-into-journalctl-using-release-binary
+- https://stackoverflow.com/questions/26354465/creating-a-simple-rust-daemon-that-listens-to-a-port
+- https://medium.com/all-about-rust/setup-rust-app-as-a-service-in-ubuntu-df788c1f1d41
+- https://github.com/vasilakisfil/hello.service
+- https://stackoverflow.com/questions/63093667/start-a-rust-binary-as-a-systemd-daemon
+- https://fabianlee.org/2017/05/21/golang-running-a-go-binary-as-a-systemd-service-on-ubuntu-16-04/
+- https://www.linuxjournal.com/article/2476
+- https://not-matthias.github.io/posts/kernel-driver-with-rust/
+- 
+
+
 ## Credits
 - [PixlOne](https://github.com/PixlOne) for amazing [logiops](https://github.com/PixlOne/logiops).
 - [vasilakisfil](https://github.com/vasilakisfil) for simple [hello.service](https://github.com/vasilakisfil/hello.service) Rust example
